@@ -58,7 +58,7 @@ if (isset($_GET['logout'])) {
                         <button data-dismiss="modal" class="close">&times;</button>
                         <h4 class="h4">Login</h4>
                         <?php include('errors.php'); ?>
-                        <form method="post">
+                        <form method="post" action="index.php">
                             <input type="text" name="email" class="username form-control" placeholder="Email"/>
                             <input type="password" name="password" class="password form-control" placeholder="Password"/>
                             <button class="btn login" type="submit" name="login_user">Login</button>

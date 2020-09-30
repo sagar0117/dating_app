@@ -21,10 +21,18 @@ if (isset($_POST['reg_user'])) {
 
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
-    if (empty($firstname)) { array_push($errors, "Firstname is required"); }
-    if (empty($lastname)) { array_push($errors, "Lastname is required"); }
-    if (empty($email)) { array_push($errors, "Email is required"); }
-    if (empty($password_1)) { array_push($errors, "Password is required"); }
+    if (empty($firstname)) {
+        array_push($errors, "Firstname is required");
+    }
+    if (empty($lastname)) {
+        array_push($errors, "Lastname is required");
+    }
+    if (empty($email)) {
+        array_push($errors, "Email is required");
+    }
+    if (empty($password_1)) {
+        array_push($errors, "Password is required");
+    }
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
@@ -53,6 +61,7 @@ if (isset($_POST['reg_user'])) {
         $_SESSION['success'] = "You are now logged in";
         header('location: index.php');
     }
+}
 
     // LOGIN USER
     if (isset($_POST['login_user'])) {
@@ -80,4 +89,5 @@ if (isset($_POST['reg_user'])) {
         }
     }
 
-}
+?>
+
